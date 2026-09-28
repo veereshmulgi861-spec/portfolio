@@ -1,0 +1,15 @@
+name:portfoloio CI
+on:
+    push:
+        branches: 
+            - main
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            -name:checout repository
+             uses: actions/checkout@v4
+             -name:ceck html file
+              run: test -f index.html
+             -name:display success message
+              run: echo "portfoloio website CI completed successfylly"
